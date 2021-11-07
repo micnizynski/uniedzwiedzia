@@ -7,7 +7,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 .start-section {
-  background: url(/images/bg-top.png) no-repeat left top/100%;
+  background: url(../images/bg-top.png) no-repeat left top/100%;
   min-height: 100vh;
 }
 .start-section__nav {
@@ -31,6 +31,7 @@ body {
   text-transform: uppercase;
   color: #fffefe;
   margin: 0 20px;
+  cursor: pointer;
 }
 .start-section__container {
   margin: 10% 0 0 10%;
@@ -194,7 +195,8 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
-.fishing-section__title {
+.fishing-section__title,
+.contact-section__title {
   font-weight: bold;
   font-size: 50px;
   line-height: 85px;
@@ -258,19 +260,88 @@ body {
 .offer-section__box {
   width: 50%;
 }
-.offer-section__img-wrapper{
+.offer-section__img-wrapper {
   overflow: hidden;
+  display: flex;
 }
 .offer-section__img-wrapper,
 .offer-section__img {
   width: 100%;
 }
-.offer-section__img{
-  height: ;
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #ffffff;
+}
+.footer__background {
+  position: absolute;
+  width: 98%;
+  height: 93%;
+  background: #000;
+  z-index: -1;
+}
+.footer__background--top {
+  background: #e54304;
+  opacity: 0.7;
+  left: 0;
+  top: 0;
+}
+.footer__background--bottom {
+  background: #000000;
+  opacity: 0.25;
+  right: 0;
+  bottom: 0;
+}
+.footer__logo img {
+  height: 140px;
+}
+.footer__texts {
+  margin: 0 10%;
+}
+.footer__company-name,
+.footer__company-address {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.footer__company-owner,
+.footer__company-data {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  color: #ffffff;
+  margin: 0 auto;
+}
+.footer__company-owner {
+  margin: 20px 0 10px;
+}
+.footer__contact-box {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+.footer__contact-box img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
 }
 @media (max-width: 1600px) {
   .start-section {
-    background: url(/images/bg-top.png) no-repeat left top;
+    background: url(../images/bg-top.png) no-repeat left top;
     min-height: 100vh;
   }
 }
