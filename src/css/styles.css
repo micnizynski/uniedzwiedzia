@@ -1,0 +1,347 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.start-section {
+  background: url(../images/bg-top.png) no-repeat left top/100%;
+  min-height: 100vh;
+}
+.start-section__nav {
+  background: rgba(0, 0, 0, 0.25);
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+}
+.start-section__nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-right: 20px;
+}
+.start-section__nav-list-item {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #fffefe;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.start-section__container {
+  margin: 10% 0 0 10%;
+}
+.start-section__title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 98px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.start-section__btn {
+  position: relative;
+  background: transparent;
+  border: none;
+  width: 360px;
+  height: 60px;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #ffffff;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 100px;
+}
+.start-section__btn::before,
+.fishing-section__btn::before {
+  position: absolute;
+  content: "";
+  right: -3px;
+  bottom: -3px;
+  width: 360px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: -1;
+  transition: 0.3s ease;
+}
+.fishing-section__btn::before {
+  width: 300px;
+}
+.start-section__btn::after,
+.fishing-section__btn::after {
+  position: absolute;
+  content: "";
+  left: -3px;
+  top: -3px;
+  width: 360px;
+  height: 60px;
+  background: rgba(229, 67, 4, 0.6);
+  z-index: -1;
+  transition: 0.3s ease;
+}
+.fishing-section__btn::after {
+  width: 300px;
+}
+.start-section__btn:hover.start-section__btn::before,
+.fishing-section__btn:hover.fishing-section__btn::before {
+  transform: translate(2px, 2px);
+  background: rgba(0, 0, 0, 0.35);
+}
+.start-section__btn:hover.start-section__btn::after,
+.fishing-section__btn:hover.fishing-section__btn::after {
+  transform: translate(-2px, -2px);
+  background: rgba(229, 67, 4, 0.75);
+}
+.start-section__subtitle {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 61px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 20px;
+}
+.start-section__subtitle--small {
+  font-size: 30px;
+  line-height: 37px;
+}
+.start-section__subtitle-container {
+  text-align: right;
+  margin-right: 5%;
+}
+.start-section__logo {
+  width: 200px;
+}
+.layover-section {
+  position: relative;
+  width: 90%;
+  margin: -50px auto;
+  background: #f7f7f7;
+  border-radius: 15px;
+  padding: 150px;
+  z-index: 2;
+}
+.layover-section__title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 61px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 50px;
+}
+.layover-section__text {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 46px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #000000;
+}
+.about-section {
+  /* margin-top: -100px;
+  z-index: 1; */
+}
+.about-section__carousel {
+  position: relative;
+}
+.about-section__carousel-item-wrapper,
+.about-section__carousel {
+  width: 100%;
+}
+.about-section__carousel-item-wrapper {
+  position: relative;
+}
+.about-section__carousel-item {
+  display: block;
+  width: 100%;
+}
+.about-section__carousel-item-texts {
+  position: absolute;
+  top: 20%;
+  /* left: 50%; */
+}
+.about-section__carousel-item-title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 61px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.about-section__carousel-item-text {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 154%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.fishing-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.fishing-section__title,
+.contact-section__title {
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 85px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 100px 0 40px;
+}
+.fishing-section__text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 35px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000000;
+}
+.fishing-section__images-container {
+  display: flex;
+  margin: 100px 0 50px;
+}
+.fishing-section__img-wrapper {
+  width: 50%;
+}
+.fishing-section__img {
+  width: 100%;
+}
+.fishing-section__btn {
+  position: relative;
+  background: transparent;
+  border: none;
+  width: 300px;
+  height: 60px;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #ffffff;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin: 20px auto 0;
+}
+.offer-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 150px;
+}
+.offer-section__title {
+  width: 100%;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 85px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000000;
+}
+.offer-section__box {
+  width: 50%;
+}
+.offer-section__img-wrapper {
+  overflow: hidden;
+  display: flex;
+}
+.offer-section__img-wrapper,
+.offer-section__img {
+  width: 100%;
+}
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #ffffff;
+}
+.footer__background {
+  position: absolute;
+  width: 98%;
+  height: 93%;
+  background: #000;
+  z-index: -1;
+}
+.footer__background--top {
+  background: #e54304;
+  opacity: 0.7;
+  left: 0;
+  top: 0;
+}
+.footer__background--bottom {
+  background: #000000;
+  opacity: 0.25;
+  right: 0;
+  bottom: 0;
+}
+.footer__logo img {
+  height: 140px;
+}
+.footer__texts {
+  margin: 0 10%;
+}
+.footer__company-name,
+.footer__company-address {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.footer__company-owner,
+.footer__company-data {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  color: #ffffff;
+  margin: 0 auto;
+}
+.footer__company-owner {
+  margin: 20px 0 10px;
+}
+.footer__contact-box {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+.footer__contact-box img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+@media (max-width: 1600px) {
+  .start-section {
+    background: url(../images/bg-top.png) no-repeat left top;
+    min-height: 100vh;
+  }
+}
