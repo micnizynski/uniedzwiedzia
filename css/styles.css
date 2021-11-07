@@ -31,9 +31,17 @@ body {
   text-transform: uppercase;
   color: #fffefe;
   margin: 0 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.start-section__nav-list-item:hover {
+  color: #ff9215;
 }
 .start-section__container {
-  margin: 10% 0 0 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5% 0;
 }
 .start-section__title {
   font-family: Montserrat;
@@ -59,7 +67,7 @@ body {
   z-index: 2;
   cursor: pointer;
   transition: 0.3s ease;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .start-section__btn::before,
 .fishing-section__btn::before {
@@ -114,11 +122,19 @@ body {
   line-height: 37px;
 }
 .start-section__subtitle-container {
-  text-align: right;
-  margin-right: 5%;
+  text-align: center;
+  width: 100%;
+  margin: 2% 0;
 }
+.start-section__logo-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 .start-section__logo {
-  width: 200px;
+  width: 300px;
 }
 .layover-section {
   position: relative;
@@ -148,10 +164,10 @@ body {
   text-transform: uppercase;
   color: #000000;
 }
-.about-section {
-  /* margin-top: -100px;
-  z-index: 1; */
-}
+/* .about-section {
+  margin-top: -100px;
+  z-index: 1;
+} */
 .about-section__carousel {
   position: relative;
 }
@@ -170,6 +186,7 @@ body {
   position: absolute;
   top: 20%;
   /* left: 50%; */
+  margin: 0 20%;
 }
 .about-section__carousel-item-title {
   font-weight: 500;
@@ -258,16 +275,16 @@ body {
 .offer-section__box {
   width: 50%;
 }
-.offer-section__img-wrapper{
+.offer-section__img-wrapper {
   overflow: hidden;
 }
 .offer-section__img-wrapper,
 .offer-section__img {
   width: 100%;
 }
-.offer-section__img{
+/* .offer-section__img {
   height: ;
-}
+} */
 @media (max-width: 1600px) {
   .start-section {
     background: url(/images/bg-top.png) no-repeat left top;
