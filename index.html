@@ -16,25 +16,25 @@
     <section class="start-section">
       <nav class="start-section__nav">
         <ul class="start-section__nav-list">
-          <li class="start-section__nav-list-item">
-            <span>O nas</span>
+          <li data-scroll-to="about" class="start-section__nav-list-item">
+            O nas
           </li>
-          <li class="start-section__nav-list-item">
-            <span>Wędkarstwo</span>
+          <li data-scroll-to="fishing" class="start-section__nav-list-item">
+            Wędkarstwo
           </li>
-          <li class="start-section__nav-list-item">
-            <span>Oferta</span>
+          <li data-scroll-to="offer" class="start-section__nav-list-item">
+            Oferta
           </li>
-          <li class="start-section__nav-list-item">
-            <span>Kontakt</span>
+          <li data-scroll-to="contact" class="start-section__nav-list-item">
+            Kontakt
           </li>
         </ul>
       </nav>
       <div class="start-section__container">
         <figure class="start-section__logo-wrapper">
-          <img class="start-section__logo" src="./images/logo-białe.png" />
+          <img class="start-section__logo" src="./src/images/logo-białe.png" />
         </figure>
-        <button class="start-section__btn"><span>Oferta</span></button>
+        <button class="start-section__btn" data-scroll-to="offer"><span>Oferta</span></button>
         <div class="start-section__subtitle-container">
           <div class="start-section__texts-container">
             <p class="start-section__subtitle">Wypoczynek</p>
@@ -60,7 +60,7 @@
         </p>
       </div>
     </section>
-    <section class="about-section">
+    <section id="about-section" class="about-section">
       <div class="about-section__carousel">
         <figure class="about-section__carousel-item-wrapper">
           <img
@@ -79,7 +79,7 @@
         </figure>
       </div>
     </section>
-    <section class="fishing-section">
+    <section id="fishing-section" class="fishing-section">
       <div class="fishing-section__texts-container">
         <p class="fishing-section__title">wędkarstwo</p>
         <p class="fishing-section__text">
@@ -94,6 +94,7 @@
             alt="zlot jerkbait"
             class="fishing-section__img"
           />
+          <div class="fishing-section__img-hover"></div>
         </figure>
         <figure class="fishing-section__img-wrapper">
           <img
@@ -101,11 +102,12 @@
             alt="Tomasz Kurnik"
             class="fishing-section__img"
           />
+          <div class="fishing-section__img-hover"></div>
         </figure>
       </div>
       <button class="fishing-section__btn">Więcej</button>
     </section>
-    <section class="offer-section">
+    <section id="offer-section" class="offer-section">
       <p class="offer-section__title">Oferta</p>
       <div class="offer-section__box">
         <figure class="offer-section__img-wrapper">
@@ -114,6 +116,7 @@
             alt="Łodzie"
             class="offer-section__img"
           />
+          <div class="offer-section__img-hover"></div>
         </figure>
       </div>
       <div class="offer-section__box">
@@ -123,6 +126,7 @@
             alt="Pokoje"
             class="offer-section__img"
           />
+          <div class="offer-section__img-hover"></div>
         </figure>
       </div>
       <div class="offer-section__box">
@@ -132,6 +136,7 @@
             alt="Imprezy"
             class="offer-section__img"
           />
+          <div class="offer-section__img-hover"></div>
         </figure>
       </div>
       <div class="offer-section__box">
@@ -141,10 +146,11 @@
             alt="Noclegi pracownicze"
             class="offer-section__img"
           />
+          <div class="offer-section__img-hover"></div>
         </figure>
       </div>
     </section>
-    <section class="contact-section">
+    <section id="contact-section" class="contact-section">
       <p class="contact-section__title">Kontakt</p>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2525.2651509768043!2d18.14086651562686!3d50.73357087951552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47105795a80574b7%3A0xd123bf3324d460db!2sU%20Nied%C5%BAwiedzia!5e0!3m2!1sen!2spl!4v1625414356755!5m2!1sen!2spl"
@@ -157,7 +163,7 @@
     </section>
     <footer class="footer">
       <figure class="footer__logo">
-        <img src="./images/logo-czarne.png" alt="Logo" />
+        <img src="./src/images/logo-czarne.png" alt="Logo" />
       </figure>
       <div class="footer__texts">
         <p class="footer__company-name">"U niedźwiedzia"</p>
