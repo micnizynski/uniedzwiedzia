@@ -1,5 +1,5 @@
-export const scrollTo = (value)=>{
-  console.log(value)
-  document.getElementById(`${value}-section`).scrollIntoView({behavior: "smooth"})
-}
-
+export const scrollTo = (value) => {
+  document
+    .getElementById(`${value}-section`)
+    .scrollIntoView({ behavior: "smooth" });
+};

@@ -11,10 +11,15 @@ body {
   min-height: 100vh;
 }
 .start-section__nav {
-  background: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
   height: 60px;
   display: flex;
   justify-content: flex-end;
+  z-index: 10;
+  align-items: center;
 }
 .start-section__nav-list {
   display: flex;
@@ -41,7 +46,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 5% 0;
+  padding-top: 10%;
+  margin: 0 0 5%;
 }
 .start-section__title {
   font-family: Montserrat;
@@ -164,29 +170,27 @@ body {
   color: #000000;
 }
 .about-section {
-  /* margin-top: -100px;
-  z-index: 1; */
+  background: url(/src/images/aboutus.png) 100% 100% / cover;
+  padding: 15% 0;
 }
-.about-section__carousel {
+.about-section__banner {
   position: relative;
 }
-.about-section__carousel-item-wrapper,
-.about-section__carousel {
+.about-section__banner-item-wrapper,
+.about-section__banner {
   width: 100%;
 }
-.about-section__carousel-item-wrapper {
+.about-section__banner-item-wrapper {
   position: relative;
 }
-.about-section__carousel-item {
+.about-section__banner-item {
   display: block;
   width: 100%;
 }
-.about-section__carousel-item-texts {
-  position: absolute;
-  top: 30%;
+.about-section__banner-item-texts {
   padding: 0 10%;
 }
-.about-section__carousel-item-title {
+.about-section__banner-item-title {
   font-weight: 500;
   font-size: 50px;
   line-height: 61px;
@@ -195,7 +199,7 @@ body {
   text-transform: uppercase;
   color: #ffffff;
 }
-.about-section__carousel-item-text {
+.about-section__banner-item-text {
   font-weight: 500;
   font-size: 30px;
   line-height: 154%;
@@ -218,7 +222,7 @@ body {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #000000;
-  margin: 100px 0 40px;
+  padding: 100px 0 40px;
 }
 .fishing-section__text {
   font-weight: 500;
@@ -261,7 +265,7 @@ body {
 .offer-section {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 150px;
+  padding-top: 150px;
 }
 .offer-section__title {
   width: 100%;
@@ -298,8 +302,8 @@ body {
 }
 .footer__background {
   position: absolute;
-  width: 98%;
-  height: 93%;
+  width: 99%;
+  height: 98%;
   background: #000;
   z-index: -1;
 }
@@ -361,24 +365,192 @@ body {
 }
 
 /* shared styles */
-.fishing-section__img-hover, .offer-section__img-hover {
+.fishing-section__img-hover,
+.offer-section__img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  transition: 0.4s;
+  opacity: 0;
+}
+.fishing-section__img-wrapper:hover .fishing-section__img-hover,
+.offer-section__img-wrapper:hover .offer-section__img-hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.visible-mobile {
+  display: none;
+}
+.visible-desktop {
+  display: flex;
+}
+.start-section__hamburger-menu {
+  width: 40px;
+  height: 35px;
+  border: 0;
+  border-top: 5px solid #ffffff;
+  background: transparent;
+  position: relative;
+  transition: 0.3s transform linear;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.start-section__hamburger-menu::before,
+.start-section__hamburger-menu::after {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0);
-  transition: 0.4s;
-}
-.fishing-section__img-wrapper:hover .fishing-section__img-hover,
-.offer-section__img-wrapper:hover .offer-section__img-hover {
-  background: rgba(0, 0, 0, 0.7);
-  cursor: pointer;
+  border-top: 5px solid #ffffff;
+  transform: translateY(10px);
 }
 
+.start-section__hamburger-menu::after {
+  transform: translateY(25px);
+  transition: 0.3s transform linear;
+}
+
+.start-section__hamburger-menu.active {
+  transform: rotate(45deg) translateY(5px);
+  border: none;
+}
+
+.start-section__hamburger-menu.active::after {
+  transform: rotate(-90deg) translateX(-10px);
+}
 @media (max-width: 1600px) {
   .start-section {
     background: url(../images/bg-top.png) no-repeat left top;
     min-height: 100vh;
+  }
+}
+@media (max-width: 768px) {
+  .visible-mobile {
+    display: flex;
+  }
+  .visible-desktop {
+    display: none;
+  }
+  .start-section {
+    min-height: 75vh;
+  }
+  .start-section__nav-list {
+    position: absolute;
+    top: 60px;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    margin-right: unset;
+    transform: translate(0, -60px);
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .start-section__nav-list.active {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  .start-section__container {
+    padding-top: 25%;
+  }
+  .start-section__btn,
+  .start-section__btn::after,
+  .start-section__btn::before,
+  .fishing-section__btn,
+  .fishing-section__btn::after,
+  .fishing-section__btn::before {
+    width: 250px;
+  }
+  .start-section__texts-container {
+    padding: 0 5%;
+  }
+  .start-section__subtitle,
+  .fishing-section__title,
+  .offer-section__title,
+  .contact-section__title {
+    font-size: 30px;
+  }
+  .start-section__subtitle--small {
+    font-size: 22px;
+    margin-top: unset;
+  }
+  .layover-section {
+    padding: 10%;
+  }
+  .layover-section__title,
+  .about-section__banner-item-title {
+    font-size: 20px;
+    line-height: 110%;
+  }
+  .layover-section__text,
+  .about-section__banner-item-text,
+  .fishing-section__text {
+    font-size: 14px;
+    line-height: 110%;
+  }
+  .about-section {
+    padding: 25% 0;
+  }
+  .about-section__banner-item-text {
+    margin-top: 20px;
+  }
+  .fishing-section__title {
+    margin: 30px 0 10px;
+  }
+  .fishing-section__texts-container {
+    padding: 0 5%;
+  }
+  .fishing-section__images-container {
+    margin: 50px 0;
+    flex-direction: column;
+  }
+  .fishing-section__img-wrapper {
+    width: 100%;
+  }
+  .offer-section {
+    margin-top: 50px;
+  }
+  .offer-section__box {
+    width: 100%;
+  }
+  .contact-section__title {
+    padding: 100px 0 0;
+  }
+  .footer {
+    flex-direction: column;
+    padding: 10% 0;
+  }
+  .footer__company-name,
+  .footer__company-address {
+    font-size: 14px;
+    line-height: 110%;
+  }
+  .footer__company-owner,
+  .footer__company-data {
+    font-size: 12px;
+    line-height: 110%;
+  }
+  .footer__contact-box {
+    margin: 5px 0;
+    justify-content: center;
+  }
+  .footer__contact-box img {
+    width: 20px;
+    height: 20px;
+  }
+  .footer__texts {
+    margin: 10%;
+  }
+  .footer__background {
+    width: 98%;
+    height: 98%;
   }
 }
