@@ -7,7 +7,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 .start-section {
-  background: url(/bg-top.4872fdba.png) no-repeat left top/100%;
+  background: url(./bg-top.4872fdba.png) no-repeat left top/100%;
   min-height: 100vh;
 }
 .start-section__nav {
@@ -130,7 +130,6 @@ body {
 }
 .start-section__subtitle-container {
   text-align: center;
-  /* margin-right: 5%; */
   width: 100%;
 }
 .start-section__logo-wrapper {
@@ -170,7 +169,7 @@ body {
   color: #000000;
 }
 .about-section {
-  background: url(/aboutus.a8fa2511.png) 100% 100% / cover;
+  background: url(./aboutus.a8fa2511.png) 100% 100% / cover;
   padding: 15% 0;
 }
 .about-section__banner {
@@ -429,7 +428,7 @@ body {
 }
 @media (max-width: 1600px) {
   .start-section {
-    background: url(/bg-top.4872fdba.png) no-repeat left top;
+    background: url(./bg-top.4872fdba.png) no-repeat left top;
     min-height: 100vh;
   }
 }
@@ -554,6 +553,5 @@ body {
     height: 98%;
   }
 }
-
 
 /*# sourceMappingURL=/styles.570b8a00.css.map */
