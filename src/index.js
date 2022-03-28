@@ -4,6 +4,7 @@ import { toggleMenu } from "./scripts/menu.js";
 const navElements = document.querySelectorAll(".start-section__nav-list-item");
 const mainButton = document.querySelector(".start-section__btn");
 const menuButton = document.querySelector(".start-section__hamburger-menu");
+const offerSectionContactButton = document.querySelector(".offer-section__contact-btn");
 
 navElements.forEach((element) => {
   element.addEventListener("click", (e) => {
@@ -15,4 +16,7 @@ mainButton.addEventListener("click", (e) => {
 });
 menuButton.addEventListener("click", (e) => {
   toggleMenu(e.target);
+});
+offerSectionContactButton.addEventListener("click", (e) => {
+  scrollTo(e.target.dataset.scrollTo);
 });
